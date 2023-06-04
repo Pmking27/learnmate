@@ -1,0 +1,22 @@
+{%extends 'main.html'%}
+
+{%block contect%}
+    <style>
+        .profile-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        }
+    </style>
+    <h3>{{user.username}}'s Profile</h3>
+    <div class="profile-container">
+        <div>
+            {% include 'base/topics_component.html' %}
+        </div>
+        <div>
+            {% include 'base/feed_component.html'%}
+        </div>
+        <div>
+            {% include 'base/actvity_component.html' %}
+        </div>
+    </div>
+{%endblock contect%}
